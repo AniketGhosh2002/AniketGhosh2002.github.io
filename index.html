@@ -3,73 +3,665 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            transition: background 0.3s, color 0.3s;
-        }
-        .dark-mode {
-            background-color: #121212;
-            color: white;
-        }
-        .dark-mode .navbar {
-            background-color: #333 !important;
-        }
-        .section {
-            display: none;
-            padding: 20px;
-        }
-        #home {
-            display: block;
-        }
-        .form-check-input {
-            cursor: pointer;
-        }
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3" id="navbar">
-        <a class="navbar-brand" href="#">My Portfolio</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('home')">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('about')">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('projects')">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('skills')">Skills & Certifications</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('contact')">Contact</a></li>
-            </ul>
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="darkModeSwitch" onclick="toggleDarkMode()">
-                <label class="form-check-label text-light" for="darkModeSwitch">Dark Mode</label>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="" class="nav__logo">AG</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active__link" onclick="showSection('home')">
+                            <i class="uil uil-estate nav__icon"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav__item"></li>
+                        <a href="#about" class="nav__link" onclick="showSection('about')">
+                            <i class="uil uil-user nav__icon"></i> About
+                        </a>
+                    </li>
+                    <li class="nav__item"></li>
+                        <a href="#projects" class="nav__link" onclick="showSection('projects')">
+                            <i class="uil uil-file-alt nav__icon"></i> Projects
+                        </a>
+                    </li>
+                    <li class="nav__item"></li>
+                        <a href="#contact" class="nav__link" onclick="showSection('contact')">
+                            <i class="uil uil-phone nav__icon"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+                
             </div>
-        </div>
-    </nav>
-    
-    <div id="home" class="section"><h2>Home</h2><p>Welcome to my portfolio website.</p></div>
-    <div id="about" class="section"><h2>About</h2><p>About me section content.</p></div>
-    <div id="projects" class="section"><h2>Projects</h2><p>My projects showcase.</p></div>
-    <div id="skills" class="section"><h2>Skills & Certifications</h2><p>My skills and certifications.</p></div>
-    <div id="contact" class="section"><h2>Contact</h2><p>Get in touch with me.</p></div>
-    
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('.section').forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-        }
+
+            <div class="nav__btns">
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+            
+                <i class="uil uil-setting theme-settings-btn" id="theme-settings-btn"></i>
+
+                <div class="theme-switcher" id="theme-switcher">
+                    <div class="theme-color first" data-color="140"></div>
+                    <div class="theme-color second" data-color="60"></div>
+                    <div class="theme-color third" data-color="220"></div>
+                    <div class="theme-color fourth" data-color="30"></div>
+                    <div class="theme-color fifth" data-color="270"></div>
+                    <div class="theme-color sixth" data-color="180"></div>
+                    <div class="theme-color seventh" data-color="320"></div>
+                    <div class="theme-color eighth" data-color="0"></div>
+                </div>
+            
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-bars"></i>
+                </div>
+            </div>            
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="home section active" id="home">
+            <div class="hom__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/aniket-ghosh-b67a9b24a/" target="_blank" class="home__social-icon">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>
+                        <a href="https://github.com/AniketGhosh2002/" target="_blank" class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                        <a href="mailto:aniketghosh255@gmail.com" target="_blank" class="home__social-icon">
+                            <i class="uil uil-envelope-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__img">
+                        <img src="images/profile.png" alt="profile" class="profile-img">
+                    </div>                    
+
+                    <div class="home__data">
+                        <h1 class="home__title">Hi, I'm Aniket </h1>
+                        <h3 class="home__subtitle">Fullstack developer</h3>
+                        <p class="home__description">
+                            Experienced in developing robust RESTful Web Services, delivering high-quality, scalable solutions. 
+                            Passionate about creating efficient and reliable systems. 
+                            Committed to continuous growth and excellence in software development.
+                        </p>
+                        <a href="#contact" class="button button--flex">
+                            Contact Me<i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <h2 class="section__title">About Me</h2>
+            <span class="section__subtitle">My introduction</span>
+
+            <div class="about__container container grid">
+                <img src="images/about.png" alt="" class="about__img">
+
+                <div class="about__data">
+                    <p class="about__description">Hi! I'm Aniket Ghosh, an Assistant System Engineer at Tata Consultancy Services with hands-on experience in Product Lifecycle Management (PLM) and Enovia software. Over the course of my career, I have successfully contributed to three client projects, gaining valuable expertise in software development and system integration.
+                        Proficient in both frontend and backend development, I am adept at utilizing HTML, CSS, JavaScript, React.js, Node.js, Django, Springboot, MySQL and MongoDB.
+                        Passionate about building scalable and efficient solutions, I enjoy developing web application. I am always eager to learn new technologies and take on challenging projects that push my skills further.
+                    </p>
+
+                    <div class="about__buttons">
+                        <a download="" href="images/AniketGhoshPhoto.jpg" class="button button--flex">
+                            Download CV<i class="uil uil-file-download button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="qualification__container container">
+                <div class="qualification__tabs">
+
+                    <div class="qualification__button button--flex qualification__active" data-target="#skills">
+                        Skills
+                    </div>
+
+                    <div class="qualification__button button--flex" data-target="#work">
+                        Experience
+                    </div>
+
+                    <div class="qualification__button button--flex" data-target="#education">
+                        Education
+                    </div>
+                </div>
+
+                <div class="qualification__sections">
+
+                    <div class="skills__container container grid qualification__active" data-content id="skills">
+                        <div>
+                            <div class="skills__content skills__open">
+                                <div class="skills__header">
+                                    <i class="uil uil-brackets-curly skills__icon"></i>
         
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-            document.getElementById("navbar").classList.toggle("bg-dark");
-            document.getElementById("navbar").classList.toggle("navbar-dark");
-        }
-    </script>
+                                    <div>
+                                        <h1 class="skills__title">Programming Language</h1>
+                                    </div>
+        
+                                    <i class="uil uil-angle-down skills__arrow"></i>
+                                </div>
+        
+                                <div class="skills__list grid">
+                                    <div class="skills__data">
+                                        <div class="skill">
+                                            <div class="skill__circle">
+                                                <svg>
+                                                    <circle cx="40" cy="40" r="35"></circle>
+                                                    <circle class="progress" cx="40" cy="40" r="35" data-percent="75"></circle>
+                                                </svg>
+                                                <span class="skills__number">75%</span>
+                                            </div>
+                                            <div class="skills__titles">
+                                                <h3 class="skills__name">Java</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skills__data">
+                                        <div class="skill">
+                                            <div class="skill__circle">
+                                                <svg>
+                                                    <circle cx="40" cy="40" r="35"></circle>
+                                                    <circle class="progress" cx="40" cy="40" r="35" data-percent="75"></circle>
+                                                </svg>
+                                                <span class="skills__number">75%</span>
+                                            </div>
+                                            <div class="skills__titles">
+                                                <h3 class="skills__name">Python</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skills__data">
+                                        <div class="skill">
+                                            <div class="skill__circle">
+                                                <svg>
+                                                    <circle cx="40" cy="40" r="35"></circle>
+                                                    <circle class="progress" cx="40" cy="40" r="35" data-percent="50"></circle>
+                                                </svg>
+                                                <span class="skills__number">50%</span>
+                                            </div>
+                                            <div class="skills__titles">
+                                                <h3 class="skills__name">C</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skills__data">
+                                        <div class="skill">
+                                            <div class="skill__circle">
+                                                <svg>
+                                                    <circle cx="40" cy="40" r="35"></circle>
+                                                    <circle class="progress" cx="40" cy="40" r="35" data-percent="50"></circle>
+                                                </svg>
+                                                <span class="skills__number">50%</span>
+                                            </div>
+                                            <div class="skills__titles">
+                                                <h3 class="skills__name">C++</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skills__content skills__close">
+                                <div class="skills__header">
+                                    <i class="uil uil-desktop skills__icon"></i>
+        
+                                    <div>
+                                        <h1 class="skills__title">Frontend development</h1>
+                                    </div>
+        
+                                    <i class="uil uil-angle-down skills__arrow"></i>
+                                </div>
+        
+                                <div class="skills__list grid">
+                                    <div class="skills__data">
+                                        <div class="skill">
+                                            <div class="skill__circle">
+                                                <svg>
+                                                    <circle cx="40" cy="40" r="35"></circle>
+                                                    <circle class="progress" cx="40" cy="40" r="35" data-percent="75"></circle>
+                                                </svg>
+                                                <span class="skills__number">75%</span>
+                                            </div>
+                                            <div class="skills__titles">
+                                                <h3 class="skills__name">HTML</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skills__data">
+                                        <div class="skill">
+                                            <div class="skill__circle">
+                                                <svg>
+                                                    <circle cx="40" cy="40" r="35"></circle>
+                                                    <circle class="progress" cx="40" cy="40" r="35" data-percent="75"></circle>
+                                                </svg>
+                                                <span class="skills__number">75%</span>
+                                            </div>
+                                            <div class="skills__titles">
+                                                <h3 class="skills__name">CSS</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skills__data">
+                                        <div class="skill">
+                                            <div class="skill__circle">
+                                                <svg>
+                                                    <circle cx="40" cy="40" r="35"></circle>
+                                                    <circle class="progress" cx="40" cy="40" r="35" data-percent="50"></circle>
+                                                </svg>
+                                                <span class="skills__number">50%</span>
+                                            </div>
+                                            <div class="skills__titles">
+                                                <h3 class="skills__name">JavaScript</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skills__content skills__close">
+                                <div class="skills__header">
+                                    <i class="uil uil-server-network skills__icon"></i>
+        
+                                    <div>
+                                        <h1 class="skills__title">Backend development</h1>
+                                    </div>
+        
+                                    <i class="uil uil-angle-down skills__arrow"></i>
+                                </div>
+        
+                                <div class="skills__list grid">
+                                    <div class="skills__data">
+                                        <div class="skill">
+                                            <div class="skill__circle">
+                                                <svg>
+                                                    <circle cx="40" cy="40" r="35"></circle>
+                                                    <circle class="progress" cx="40" cy="40" r="35" data-percent="75"></circle>
+                                                </svg>
+                                                <span class="skills__number">75%</span>
+                                            </div>
+                                            <div class="skills__titles">
+                                                <h3 class="skills__name">Django</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skills__data">
+                                        <div class="skill">
+                                            <div class="skill__circle">
+                                                <svg>
+                                                    <circle cx="40" cy="40" r="35"></circle>
+                                                    <circle class="progress" cx="40" cy="40" r="35" data-percent="50"></circle>
+                                                </svg>
+                                                <span class="skills__number">50%</span>
+                                            </div>
+                                            <div class="skills__titles">
+                                                <h3 class="skills__name">Springboot</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skills__data">
+                                        <div class="skill">
+                                            <div class="skill__circle">
+                                                <svg>
+                                                    <circle cx="40" cy="40" r="35"></circle>
+                                                    <circle class="progress" cx="40" cy="40" r="35" data-percent="50"></circle>
+                                                </svg>
+                                                <span class="skills__number">50%</span>
+                                            </div>
+                                            <div class="skills__titles">
+                                                <h3 class="skills__name">NodeJs</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="skills__content skills__close">
+                                <div class="skills__header">
+                                    <i class="uil uil-database skills__icon"></i>
+        
+                                    <div>
+                                        <h1 class="skills__title">Database</h1>
+                                    </div>
+        
+                                    <i class="uil uil-angle-down skills__arrow"></i>
+                                </div>
+        
+                                <div class="skills__list grid">
+                                    <div class="skills__data">
+                                        <div class="skill">
+                                            <div class="skill__circle">
+                                                <svg>
+                                                    <circle cx="40" cy="40" r="35"></circle>
+                                                    <circle class="progress" cx="40" cy="40" r="35" data-percent="75"></circle>
+                                                </svg>
+                                                <span class="skills__number">75%</span>
+                                            </div>
+                                            <div class="skills__titles">
+                                                <h3 class="skills__name">MySQL</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skills__data">
+                                        <div class="skill">
+                                            <div class="skill__circle">
+                                                <svg>
+                                                    <circle cx="40" cy="40" r="35"></circle>
+                                                    <circle class="progress" cx="40" cy="40" r="35" data-percent="50"></circle>
+                                                </svg>
+                                                <span class="skills__number">50%</span>
+                                            </div>
+                                            <div class="skills__titles">
+                                                <h3 class="skills__name">PostgreSQL</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="qualification__content" data-content id="work">
+
+                        <div class="qualification__data">
+
+                            <div>
+                                <h3 class="qualification__title">Assistant System Engineer</h3>
+                                <span class="qualification__subtitle">Tata Consultancy Services</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calendar-alt"></i>
+                                        2023 - Present
+                                </div>
+                            </div>
+
+                            <div>
+                                <i class="uil uil-briefcase-alt qualification__icon"></i>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <div></div>
+
+                            <div>
+                                <i class="uil uil-briefcase-alt qualification__icon"></i>
+                            </div>
+                            
+                            <div>
+                                <h3 class="qualification__title">Project Intern</h3>
+                                <span class="qualification__subtitle">AICTE Affiliated With MOHUA</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calendar-alt"></i>
+                                        2022
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="qualification__content" data-content id="education">
+
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">B.Tech In Mechanical Engineering</h3>
+                                <span class="qualification__subtitle">Academy Of Technology</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calendar-alt"></i>
+                                        2019 - 2023
+                                </div>
+                            </div>
+
+                            <div>
+                                <i class="uil uil-graduation-cap qualification__icon"></i>
+                                <span class="qualification__line"></span>
+                            </div>
+
+                            <div></div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <div></div>
+
+                            <div>
+                                <i class="uil uil-graduation-cap qualification__icon"></i>
+                                <span class="qualification__line"></span>
+                            </div>
+
+                            <div>
+                                <h3 class="qualification__title">Class XI To XII</h3>
+                                <span class="qualification__subtitle">Chatra Nandalal Institution</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calendar-alt"></i>
+                                        2017 - 2029
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Class V To X</h3>
+                                <span class="qualification__subtitle">Sankrail AC High School</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calendar-alt"></i>
+                                        2011 - 2017
+                                </div>
+                            </div>
+
+                            <div>
+                                <i class="uil uil-graduation-cap qualification__icon"></i>
+                                <span class="qualification__line"></span>
+                            </div>
+
+                            <div></div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <div></div>
+
+                            <div>
+                                <i class="uil uil-graduation-cap qualification__icon"></i>
+                            </div>
+
+                            <div>
+                                <h3 class="qualification__title">KG To Class IV</h3>
+                                <span class="qualification__subtitle">Bolpur Public School</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calendar-alt"></i>
+                                        2005 - 2010
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio section" id="projects">
+            <h2 class="section__title">Projects</h2>
+            <span class="section__subtitle">My works</span>
+
+            <div class="portfolio__container container">
+                <div class="portfolio__content grid">
+                    <div class="portfolio__item">
+                        <img src="images/digidine__project.jpg" alt="project1" class="portfolio__img">
+                        <h3 class="portfolio__title">Restaurant Management System</h3>
+                        <button class="button popup__click">
+                            Check
+                            <i class="uil uil-arrow-up-right button__icon"></i>
+                        </button>
+                    </div>
+                    <div class="portfolio__popup">
+                        <i class="uil uil-times popup__close" id="popup-close"></i>
+                        <div class="portfolio__data">
+                            <p class="portfolio__description">
+                                DigiDine is a restaurant menu app built with Django Rest Framework, designed to enhance the dining experience. 
+                                Users can easily browse and order dishes, with a seamless interface that categorizes orders by cuisine. 
+                                The app efficiently connects customers with chefs, displaying which dishes need to be prepared by each chef, ensuring smooth operations and quick service.
+                            </p>
+                            <a href="https://github.com/AniketGhosh2002/DigiDine/" class="button button--flex button--small portfolio__button">
+                                Github
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                            <a href="https://digidinerestaurant.onrender.com/" class="button button--flex button--small portfolio__button" onclick="startCountdown()">
+                                Visit
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="portfolio__content grid">
+                    <div class="portfolio__item">
+                        <img src="images/dishify__project.jpg" alt="project2" class="portfolio__img">
+                        <h3 class="portfolio__title">GenAI Recipe Generator</h3>
+                        <button class="button popup__click">
+                            Check
+                            <i class="uil uil-arrow-up-right button__icon"></i>
+                        </button>
+                    </div>
+                    <div class="portfolio__popup">
+                        <i class="uil uil-times popup__close" id="popup-close"></i>
+                        <div class="portfolio__data">
+                            <p class="portfolio__description">Dishify is an AI-powered recipe generator that creates customized recipes based on user input.
+                                Simply enter ingredients, their quantities, the cuisine type and Dishify will generate a personalized recipe.
+                                Uses advanced AI model Google GenAI to process and understand input.
+                                Generates a step-by-step recipe tailored to the user provided ingredients.
+                            </p>
+                            <a href="https://github.com/AniketGhosh2002/dishify/" class="button button--flex button--small portfolio__button">
+                                Github
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                            <a href="https://dishify-qjzn.onrender.com/" class="button button--flex button--small portfolio__button" onclick="startCountdown()">
+                                Visit
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="portfolio__content grid">
+                    <div class="portfolio__item">
+                        <img src="images/sahajya__project.jpg" alt="project3" class="portfolio__img">
+                        <h3 class="portfolio__title">A NGO Blog Website</h3>
+                        <button class="button popup__click">
+                            Check
+                            <i class="uil uil-arrow-up-right button__icon"></i>
+                        </button>
+                    </div>
+                    <div class="portfolio__popup">
+                        <i class="uil uil-times popup__close" id="popup-close"></i>
+                        <div class="portfolio__data">
+                            <p class="portfolio__description">Sahajya is a web application designed to bridge the gap between NGOs and the community.
+                                Provides a platform where people can donate, join events, and engage with NGO content.
+                                The NGO's management can efficiently handle blog creation, event planning, donations, and participant monitoring.
+                            </p>
+                            <a href="https://github.com/AniketGhosh2002/Sahajya/" class="button button--flex button--small portfolio__button">
+                                Github
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                            <a href="https://sahajya.onrender.com/" class="button button--flex button--small portfolio__button" onclick="startCountdown()">
+                                Visit
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="toast-container">
+                <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast_header">
+                        <p class="toast__header-message">Redirecting..</p>
+                        <i class="uil uil-times toast__close" onclick="hideToast()"></i>
+                    </div>
+                    <div class="toast-body" id="toastMessage">
+                        Please wait 59 sec
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Contact Me</h2>
+            <span class="section__subtitle">Get in touch</span>
+
+            <div class="contact__container container grid">
+                <div>
+                    <div class="contact__information">
+                        <i class="uil uil-phone contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">Call Me</h3>
+                            <span class="contact__subtitle">+91 8902038188</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-envelope-alt contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">Email</h3>
+                            <span class="contact__subtitle">aniketghosh255@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-map-marker contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">Location</h3>
+                            <span class="contact__subtitle">Kolkata, WB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="contactForm" class="contact__form grid">
+                    <div class="contact__inputs grid">
+                        <div class="contact__content">
+                            <label for="name" class="contact__label">Name</label>
+                            <input type="text" id="name" name="name" class="contact__input" required>
+                        </div>
+                
+                        <div class="contact__content">
+                            <label for="email" class="contact__label">Email</label>
+                            <input type="email" id="email" name="email" class="contact__input" required>
+                        </div>
+                
+                        <div class="contact__content">
+                            <label for="message" class="contact__label">Query</label>
+                            <textarea id="message" name="message" cols="0" rows="7" class="contact__input" required></textarea>
+                        </div>
+                
+                        <div>
+                            <button type="submit" class="button button--flex">
+                                Send Message
+                                <i class="uil uil-message button__icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                
+                <p id="responseMessage"></p>
+            </div>
+        </section>
+
+    </main>
+
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
+    
 </body>
 </html>
