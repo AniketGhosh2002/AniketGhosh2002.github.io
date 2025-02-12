@@ -5,7 +5,6 @@
     --hue-color: 140;
 
     --first-color: hsl(var(--hue-color), 70%, 60%);
-    --first-color-second: hsl(var(--hue-color), 70%, 60%);
     --first-color-alt: hsl(var(--hue-color), 50%, 50%);
     --first-color-lighter: hsl(var(--hue-color), 90%, 85%);
     --progress-color: #E0E0E0;
@@ -131,7 +130,6 @@
 
 
 body.dark-theme{
-    --first-color-second: hsl(var(--hue-color), 30%, 15%);
     --title-color: hsl(var(--hue-color), 10%, 95%);
     --progress-color: #555;
     --text-color: hsl(var(--hue-color), 10%, 75%);
@@ -757,58 +755,6 @@ circle {
     color: var(--first-color);
 }
 
-.footer{
-    padding-top: 2rem;
-}
-
-.footer__container{
-    row-gap: 3.5rem;
-}
-
-.footer__bg{
-    background-color: var(--first-color-second);
-    padding: 2rem 0 3rem;
-}
-
-.footer__title{
-    font-size: var(--h1-font-size);
-    margin-bottom: var(--mb-0-25);
-}
-
-.footer__subtitle{
-    font-size: var(--small-font-size);
-}
-
-.footer__links{
-    display: flex;
-    flex-direction: column;
-    row-gap: 1.5rem;
-}
-
-.footer__link:hover{
-    color: var(--first-color-lighter);
-}
-
-.footer__social{
-    font-size: 1.3rem;
-    margin-right: var(--mb-1-5);
-}
-
-.footer__social:hover{
-    color: var(--first-color-lighter);
-}
-
-.footer__copy{
-    font-size: var(--smaller-font-size);
-    text-align: center;
-    color: var(--text-color-light);
-    margin-top: var(--mb-3);
-}
-
-.footer__title,.footer__subtitle,.footer__link,.footer__social{
-    color: #fff;
-}
-
 
 @media screen and (min-width:350px){
     .container{
@@ -871,7 +817,7 @@ circle {
         justify-content: center;
     }
 
-    .contact__container, .footer__container, .portfolio__container{
+    .contact__container, .portfolio__container{
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -903,7 +849,7 @@ circle {
         bottom: initial;
     }
 
-    .header, .main, .footer__container{
+    .header, .main{
         padding: 0 1rem;
     }
 
@@ -978,31 +924,10 @@ circle {
         width: 300px;
         height: 300px;
     }
-
-    .footer__container{
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .footer__bg{
-        padding: 3rem 0 3.5rem;
-    }
-
-    .footer__links{
-        flex-direction: row;
-        column-gap: 2rem;
-    }
-
-    .footer__socials{
-        justify-self: flex-end;
-    }
-
-    .footer__copy{
-        margin-top: 4.5rem;
-    }
 }
 
 @media screen and (min-width: 1024px) {
-    .header, .main, .footer__container{
+    .header, .main{
         padding: 0;
     }
 

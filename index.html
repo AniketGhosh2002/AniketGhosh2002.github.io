@@ -90,7 +90,7 @@
                             Passionate about creating efficient and reliable systems. 
                             Committed to continuous growth and excellence in software development.
                         </p>
-                        <a href="#contact" class="button button--flex">
+                        <a href="#contact" class="button button--flex" onclick="showSection('contact')">
                             Contact Me<i class="uil uil-message button__icon"></i>
                         </a>
                     </div>
@@ -112,7 +112,7 @@
                     </p>
 
                     <div class="about__buttons">
-                        <a download="" href="images/AniketGhoshPhoto.jpg" class="button button--flex">
+                        <a download="" href="pdfs/AniketGhosh_CV.pdf" class="button button--flex">
                             Download CV<i class="uil uil-file-download button__icon"></i>
                         </a>
                     </div>
@@ -178,20 +178,6 @@
                                             </div>
                                             <div class="skills__titles">
                                                 <h3 class="skills__name">Python</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skills__data">
-                                        <div class="skill">
-                                            <div class="skill__circle">
-                                                <svg>
-                                                    <circle cx="40" cy="40" r="35"></circle>
-                                                    <circle class="progress" cx="40" cy="40" r="35" data-percent="50"></circle>
-                                                </svg>
-                                                <span class="skills__number">50%</span>
-                                            </div>
-                                            <div class="skills__titles">
-                                                <h3 class="skills__name">C</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -578,6 +564,34 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="portfolio__content grid">
+                    <div class="portfolio__item">
+                        <img src="images/clinicare__project.jpg" alt="project3" class="portfolio__img">
+                        <h3 class="portfolio__title">Polyclinic Management System</h3>
+                        <button class="button popup__click">
+                            Check
+                            <i class="uil uil-arrow-up-right button__icon"></i>
+                        </button>
+                    </div>
+                    <div class="portfolio__popup">
+                        <i class="uil uil-times popup__close" id="popup-close"></i>
+                        <div class="portfolio__data">
+                            <p class="portfolio__description">CLINICARE is a polyclinic management website designed to streamline clinic operations.
+                                Key features include appointment booking, lab test scheduling, medicine ordering and receipt generation.
+                                The platform simplifies tasks for clinic staff and enhances the patient experience by providing easy access to healthcare services.                            
+                            </p>
+                            <a href="https://github.com/AniketGhosh2002/CliniCare/" class="button button--flex button--small portfolio__button">
+                                Github
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                            <a href="https://polyclinicare.freewebhostmost.com/" class="button button--flex button--small portfolio__button" onclick="startCountdown()">
+                                Visit
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="toast-container">
@@ -646,7 +660,7 @@
                 
                         <div>
                             <button type="submit" class="button button--flex">
-                                Send Message
+                                Send
                                 <i class="uil uil-message button__icon"></i>
                             </button>
                         </div>
