@@ -483,7 +483,7 @@ img{
     align-items: center;
     flex-direction: column;
     text-align: center;
-    margin: 10px;
+    margin: 5px;
 }
 
 .skill__circle {
@@ -521,12 +521,13 @@ circle {
 
 .skills__list {
     display: flex;
-    gap: 15px; 
+    gap: 6px; 
     justify-content: center; 
     flex-wrap: wrap; 
 }
 
 .skills__name{
+    margin-top: var(--mb-0-5);
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
 }
