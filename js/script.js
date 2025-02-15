@@ -180,7 +180,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 
     this.reset();
 
-    fetch("https://formsubmit.co/ajax/aniketghosh255@gmail.com", {
+    fetch("https://formsubmit.co/ajax/aniketghosh355@gmail.com", {
         method: "POST",
         body: formData
     })
