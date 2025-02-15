@@ -179,7 +179,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 
     let formData = new FormData(this); 
 
-    fetch("https://formsubmit.co/ajax/aniketghosh255@gmail.com", {
+    fetch("https://formsubmit.co/ajax/b530c8745f1425f3f7604e3617749936", {
         method: "POST",
         headers: { "Accept": "application/json" },
         body: formData
