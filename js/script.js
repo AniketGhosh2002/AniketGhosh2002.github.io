@@ -171,25 +171,28 @@ function hideToast() {
 // Contact form submission
 
 document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    this.reset();
+    event.preventDefault(); 
 
     document.getElementById("responseMessage").innerText = "Sending...";
     document.getElementById("responseMessage").style.display = "block";
 
     let formData = new FormData(this); 
 
+    this.reset();
+
     fetch("https://formsubmit.co/ajax/b530c8745f1425f3f7604e3617749936", {
         method: "POST",
-        headers: { "Accept": "application/json" },
         body: formData
     })
     .then(response => response.json())
     .then(data => {
         document.getElementById("responseMessage").innerText = "Message sent successfully!";
+        document.getElementById("responseMessage").style.display = "block";
+        document.getElementById("contactForm").reset(); // Clear form
     })
     .catch(error => {
         document.getElementById("responseMessage").innerText = "Error sending message. Please try again.";
+        document.getElementById("responseMessage").style.display = "block";
     });
 });
 
